@@ -60,7 +60,12 @@
         }
         #getBtn:hover{
             color: white;
-            background-color: tomato
+            background-color: tomato;
+        }
+        #result{
+            margin: 0px;
+            text-shadow:0px 0px 3px tomato;
+            font-size: 100px;
         }
     </style>
 </head>
@@ -76,11 +81,7 @@
     </fieldset>
     <br>
     <button id="getBtn">한명 뽑기</button>
-
-
     <p id="result"></p>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati, fugiat harum voluptatibus beatae explicabo, neque commodi corporis repellat a esse sunt necessitatibus illo fuga officiis quas ad tempora rerum!</p>
     <script>
         const sound=new Audio("\Hologram - Bobby Richards.mp3");
         document.querySelector("#playBtn").addEventListener("click", function(){
