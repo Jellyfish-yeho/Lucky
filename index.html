@@ -5,9 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index.html</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <style>
-        
+        body{
+            font-family: 'Do Hyeon', sans-serif;
+            background-color: lightgray;
+        }
+        fieldset{
+            width: 400px;
+            height: 50px;
+            border: 2px solid slateblue;
+            border-radius: 10px;
+        }
+        legend{
+            text-align: center;
+            color: slateblue;
+            font-weight: bold;
+        }
         #playBtn{
+            font-family: 'Do Hyeon', sans-serif;
             margin-right: -5px;
             border: 1px solid slateblue;
             background-color: white;
@@ -17,7 +34,8 @@
             border-top-left-radius: 5px;
         }
         #pauseBtn{
-            margin-right: -4px;
+            font-family: 'Do Hyeon', sans-serif;
+            margin-right: 5px;
             border: 1px solid slateblue;
             background-color: white;
             color: slateblue;
@@ -25,9 +43,24 @@
             border-bottom-right-radius: 5px;
             border-top-right-radius: 5px;
         }
+        #nowPlay{
+            color: slateblue;
+        }
         #musicBtn button:hover{
             color: white;
             background-color: slateblue;
+        }
+        #getBtn{
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 30px;
+            margin: 10px;
+            border: 2px dotted tomato;
+            background-color: white;
+            color: tomato;
+        }
+        #getBtn:hover{
+            color: white;
+            background-color: tomato
         }
     </style>
 </head>
@@ -35,16 +68,18 @@
     <h1>인덱스 페이지 입니다(김구라)</h1>
     <fieldset>
         <legend>두구두구한 음악 재생</legend>
-        <div id="musicBtn">
+        <span id="musicBtn">
         <button id="playBtn">play</button>
         <button id="pauseBtn">pause</button>
-        </div>
+        </span>
+        <span id="nowPlay">Now playing : Hologram-Bobby Richards.mp3</span>
     </fieldset>
     <br>
     <button id="getBtn">한명 뽑기</button>
 
 
     <p id="result"></p>
+
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati, fugiat harum voluptatibus beatae explicabo, neque commodi corporis repellat a esse sunt necessitatibus illo fuga officiis quas ad tempora rerum!</p>
     <script>
         const sound=new Audio("\Hologram - Bobby Richards.mp3");
@@ -70,7 +105,7 @@
             let ranNum=Math.floor(Math.random()*31);
             // names 배열에서 랜덤한 인덱스에 해당하는 이름을 p 요소에 출력하기 
             document.querySelector("#result").innerText=names[ranNum];
-        });
+        });      
     </script>
 </body>
 </html>
