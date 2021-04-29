@@ -8,10 +8,21 @@
 </head>
 <body>
     <h1>인덱스 페이지 입니다(김구라)</h1>
+    <fieldset>
+        <legend>두구두구한 음악 재생</legend>
+        <input type="button" onclick="audio.play();" value="play">
+        <input type="button" onclick="audio.pause();" value="pause">
+    </fieldset>
+    <br>
     <button id="getBtn">한명 뽑기</button>
+
+
     <p id="result"></p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati, fugiat harum voluptatibus beatae explicabo, neque commodi corporis repellat a esse sunt necessitatibus illo fuga officiis quas ad tempora rerum!</p>
     <script>
+        let audio = new Audio('\Hologram - Bobby Richards.mp3')
+      
+
         let names=["강륜화","강민경","강민재","강희은","고지은",
         "고현석","김규환","김나현","김다연","김정솔",
         "김희정","석우현","신현미","양우람","유형우",
